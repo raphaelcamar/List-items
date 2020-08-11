@@ -1,0 +1,15 @@
+.App{
+  overflow: hidden;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html,body, #root{
+  max-height: 50rem;
+  background-image: url(./assets/bg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
