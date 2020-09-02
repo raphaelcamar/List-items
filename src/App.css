@@ -7,9 +7,3 @@
   box-sizing: border-box;
 }
 
-html,body, #root{
-  max-height: 50rem;
-  background-image: url(./assets/bg.jpg);
-  background-size: 100%;
-  background-attachment: fixed;
-}

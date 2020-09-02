@@ -1,47 +1,73 @@
-.form{
-    display:flex;
-    width: 50%;
-    justify-content: space-around;
-    margin : 7% auto;
-    
-}
+html,body{
+    background-color: rgb(224, 224, 224);
+    background-image: linear-gradient(to bottom right,rgb(241, 241, 241),rgb(177, 177, 177));
+    background-size: 100%;
+    height: 100vh; 
+  }
+
 *{
     font-family: 'Poppins', sans-serif;
 }
-.form input{
-    margin : 2% 0;
-    padding: 15px;
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-    border-radius: 20px;
-    font-weight: 300;
+
+.form{
+    display:flex;
+    max-width: 1200px;
+    margin : 6% auto;
+    flex-direction: row;
+    align-items: flex-end;
+    border-bottom: solid 1px #b1b1b1;
+    padding-bottom: 2%;
+}
+.input-form{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
     
 }
+.input-form label{
+    margin: 10% 0 2% 0;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+}
+
+.input-form input{
+    padding: 15px;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.281);
+    border: 0 none;
+    outline: 0;
+    border-radius: 7px;
+    font-weight: 300;
+    width: 200px;
+    color : rgb(54, 54, 54);
+    border: solid 1px #ffffff;
+}
+.input-form input:focus{
+    border: solid 1px #2877f7;
+}
 button{
-    background: #025dee;
+    background: #2877f7;
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
     border-radius: 20px;
     padding:  15px 50px !important;
-    margin : 2% 0;
     color:white;
     font-weight: 400;
+    cursor: pointer;
 }
 .title{
     text-align: center;
     margin-bottom : 5%;
-    color:white;
+    color:rgb(54, 54, 54);
     font-weight: 600;
 }
 table{
-    width: 70%;
-    background: #438789c4;
+    width: 1200px;
+    background: #2877f7;
     table-layout: fixed;
     margin: 0 auto;
     margin-bottom:2%;
-    color:rgb(230, 227, 227);
+    color:white;
     border-radius: 5px;
     
 }
@@ -68,5 +94,36 @@ tbody td{
 tbody tr:last-child td{
     border: 0
 }
+@media(max-width : 1200px){
+    .form{
+        max-width: 90%;
+    }
+    table{
+        width: 90%;
+    }
+    thead td {
+        font-size: 15px;
+    }
+}
+
+@media(max-width : 1000px){
+    .form{
+        max-width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .input-form{
+        width: 100%;
+    }
+    .input-form input{
+        width: 100%;
+    }
+    button{
+        margin-top: 8%;
+        width: 50%;
+    }
+}
+
 
 

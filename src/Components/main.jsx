@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.css'
 
 function Main(){
+
     const initialValues ={
         name : '',
         price : '',
@@ -41,10 +42,13 @@ function Main(){
         <form onSubmit={function sendValues(e){
             e.preventDefault();
             setItems([...items, values]);
-            setValues(initialValues)
+            setValues(initialValues);
         }}>
             <div className="form">
-            <input 
+            <div className="input-form">
+                <label htmlFor="name">Digite seu nome</label>
+                <input
+                id='name'
                 type="text" 
                 name="name" 
                 placeholder="Digite o nome do produto" 
@@ -53,7 +57,10 @@ function Main(){
                 value={values.name}
                 maxLength='30'
             />
-            <input 
+            </div>
+            <div className="input-form">
+                <label htmlFor="name">Digite seu preço</label>
+                <input 
                 type="text" 
                 name="price" 
                 placeholder="Digite o preço do produto"
@@ -61,7 +68,10 @@ function Main(){
                 onChange={handleInputChange}
                 value={values.price}
             />
-            <input 
+            </div>
+            <div className="input-form">
+                <label htmlFor="name">Digite sua descrição</label>
+                <input 
                 type="text" 
                 name="desc"    
                 placeholder="Descrição do produto"
@@ -70,7 +80,7 @@ function Main(){
                 value={values.desc}
                 maxLength='30'
             />
-            
+            </div>     
         <button type="submit">Enviar</button>
         </div>
         </form>
